@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head ng-app="proxyAdmin">
+  <title>Angular 1st test</title>
+  <!-- third party -->
+  <script type="text/javascript" src="assets/js/jquery.js"></script>
+  <script type="text/javascript" src="assets/js/angular.min.js"></script>
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
+  <!-- propietary -->
+  <script type="text/javascript" src="assets/js/app.js"></script>
+  <link rel="stylesheet" type="text/css" href="assets/css/app.css">
+</head>
+<body>
+  <div class="row">
+    <div class="col-sm-6" ng-controller="ResultsListController as results">
+      <h1>Results list</h1>
+      {{results.test}}
+      <ul>
+
+        <li ng-repeat="item in results.items">
+          <ul>
+            <li>{{item.name}}</li>
+            <li>{{item.id}}</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-sm-6">
+      <h1>Description list</h1>
+
+    </div>
+  </div>
+</body>
+</html>
